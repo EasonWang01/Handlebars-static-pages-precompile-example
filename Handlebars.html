@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script src="color-template.js"></script>
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>My New Post</h1>
+    <div class="body">
+     This is my first post!
+    </div>
+  </div>
+</script>
+
+<script id="entry-template2" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>My New Post assss</h1>
+    <div class="body">
+     This is my first post asssssssssssss!
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/cmpRLQZkTb8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/cmpRLQZkTb8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/cmpRLQZkTb8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/cmpRLQZkTb8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/cmpRLQZkTb8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</script>
+<script>
+
+var template = Handlebars.compile($("#entry-template").html());
+var html    = template();
+
+var template1 = Handlebars.templates['color-template']();
+
+var template2 = Handlebars.compile($("#entry-template2").html());
+var html2    = template2();
+</script>
+</head>
+
+
+<body>
+<button  style="width:80px;height:80px" onclick="getElementById('content').innerHTML=html">  </button>
+<button  style="width:80px;height:80px" onclick="getElementById('content').innerHTML=template1">  </button>
+<button  style="width:80px;height:80px" onclick="getElementById('content').innerHTML=html2">  </button>
+<div id="content"  ></div>
+
+</body>
+
+</html>
